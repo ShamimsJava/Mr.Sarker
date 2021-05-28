@@ -1,18 +1,650 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
-	<head>
-		<meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Shamim."/>
-		<meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="dc:creator" content="Shamim"/>
-		<meta name="dc:title" content="1.5 Capitalization"/>
-		<title>1.5 Capitalization</title>
-		<!-- Made with executable version 7.0 Release 3 Build 0 -->
-		<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<style>/* This is the CSS stylesheet used in the exercise. */ /* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */ /* BeginCorePageCSS */ /* Made with executable version 7.0 Release 3 Build 0 */ /* CSS variables for colours. */ :root{ --strFontFace: arial,helvetica,sans-serif; --strFontSize: small; --strTextColor: #000000; --strTitleColor: #000000; --strFuncLightColor: #eeeeee; --strFuncShadeColor: #6e6e6e; --strLinkColor: #0000ff; --strVLinkColor: #ff00ff; --strNavBarColor: #000000; --strNavLightColor: #7f7f7f; --strNavShadeColor: #000000; --strNavTextColor: #ffffff; --strPageBGColor: #ffffff; --strExBGColor: #dddddd; } body{ font-family: var(--strFontFace); background-color: var(--strPageBGColor); color: var(--strTextColor); margin-right: 5%; margin-left: 5%; font-size: var(--strFontSize); padding-bottom: 0.5em; } p{ text-align: left; margin: 0px; font-size: 1em; } table,div,span,td{ font-size: 1em; color: var(--strTextColor); } div.Titles{ padding: 0.5em;; text-align: center; color: var(--strTitleColor); } button{ font-family: var(--strFontFace); font-size: 1em; display: inline; } .ExerciseTitle{ font-size: 140%; color: var(--strTitleColor); } .ExerciseSubtitle{ font-size: 120%; color: var(--strTitleColor); } div.StdDiv, div.ExerciseContainer, div.ReadingContainer{ background-color: var(--strExBGColor); text-align: center; font-size: 1em; color: var(--strTextColor); padding: 0.5em; border-style: solid; border-width: 1px 1px 1px 1px; border-color: var(--strTextColor); margin-bottom: 1px; } div.ReadingContainer, div.ExerciseContainer{ min-width: 15em; flex-grow: 1; flex-basis: 0; margin: 1px; } div#ContainerDiv{ margin: -1px; padding: 0; border: none; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; } /* EndCorePageCSS */ .RTLText{ text-align: right; font-size: 150%; direction: rtl; font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); } .CentredRTLText{ text-align: center; font-size: 150%; direction: rtl; font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); } button p.RTLText{ text-align: center; } .RTLGapBox{ text-align: right; font-size: 150%; direction: rtl; font-family: "Times New Roman", var(--strFontFace); } .Guess{ font-weight: bold; } .CorrectAnswer{ font-weight: bold; } div#Timer{ padding: 0.25em; margin-left: auto; margin-right: auto; text-align: center; color: var(--strTitleColor); } span#TimerText{ padding: 0.25em; border-width: 1px; border-style: solid; font-weight: bold; display: none; color: var(--strTitleColor); } span.Instructions{ } div.ExerciseText{ } .FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{ color: var(--strTitleColor); } .LeftItem{ font-size: 1em; color: var(--strTextColor); text-align: left; } .RightItem{ font-weight: bold; font-size: 1em; color: var(--strTextColor); text-align: left; } span.CorrectMark{ } input, textarea{ font-family: var(--strFontFace); font-size: 120%; } select{ font-size: 1em; } div.Feedback { background-color: var(--strPageBGColor); left: 33%; width: 34%; top: 33%; z-index: 1; border-style: solid; border-width: 1px; padding: 5px; text-align: center; color: var(--strTitleColor); position: absolute; display: none; font-size: 1em; } div.ExerciseDiv{ color: var(--strTextColor); } /* JMatch standard output table. */ table.MatchTable{ margin: 2em auto; border-width: 0; } /* JMatch flashcard styles */ table.FlashcardTable{ background-color: transparent; color: var(--strTextColor); border-color: var(--strTextColor); margin-left: auto; margin-right: auto; margin-top: 2em; margin-bottom: 2em; /*width: 90%;*/ position: relative; text-align: center; padding: 0px; } table.FlashcardTable tr{ border-style: none; margin: 0px; padding: 0px; background-color: var(--strExBGColor); } table.FlashcardTable td.Showing{ font-size: 140%; text-align: center; width: 50%; display: table-cell; padding: 2em; margin: 0px; border-style: solid; border-width: 1px; border-radius: 0.5em; color: var(--strTextColor); box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor); background-color: var(--strPageBGColor); } table.FlashcardTable td.Hidden{ display: none; } /* JMix styles */ div.JMixDrag, div.JMatchDrag{ padding: 0; background-color: var(--strPageBGColor); border-style: none; } div#GuessDiv{ padding: 0.5em; margin-bottom: 2em; } div#SegmentDiv{ margin-top: 2em; margin-bottom: 2em; text-align: center; } a.ExSegment{ font-size: 120%; font-weight: bold; text-decoration: none; color: var(--strTextColor); display: inline-block; padding: 0.5em; border: solid 1pt gray; margin-bottom: 0.5em; } span.RemainingWordList{ font-style: italic; } div.DropLine { position: absolute; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: var(--strTitleColor); width: 80%; left: 10%; } /* JCloze styles */ .ClozeWordList{ text-align: center; font-weight: bold; } div.ClozeBody{ text-align: left; margin-top: 2em; margin-bottom: 2em; line-height: 2.0 } span.GapSpan{ font-weight: bold; } /* JCross styles */ table.CrosswordGrid{ margin: auto auto 1em auto; border-collapse: collapse; padding: 0px; background-color: #000000; } table.CrosswordGrid tbody tr td{ width: 1.5em; height: 1.5em; text-align: center; vertical-align: middle; font-size: 140%; padding: 1px; margin: 0px; border-style: solid; border-width: 1px; border-color: #000000; color: #000000; } table.CrosswordGrid span{ color: #000000; } table.CrosswordGrid td.BlankCell{ background-color: #000000; color: #000000; } table.CrosswordGrid td.LetterOnlyCell{ text-align: center; vertical-align: middle; background-color: #ffffff; color: #000000; font-weight: bold; } table.CrosswordGrid td.NumLetterCell{ text-align: left; vertical-align: top; background-color: #ffffff; color: #000000; padding: 1px; font-weight: bold; } .NumLetterCellText{ cursor: pointer; color: #000000; } .GridNum{ vertical-align: super; font-size: 66%; font-weight: bold; text-decoration: none; color: #000000; } .GridNum:hover, .GridNum:visited{ color: #000000; } table#Clues{ margin: auto; vertical-align: top; } table#Clues td{ vertical-align: top; } table.ClueList{ margin: auto; } td.ClueNum{ text-align: right; font-weight: bold; vertical-align: top; } td.Clue{ text-align: left; } div#ClueEntry{ text-align: left; margin-bottom: 1em; } /* Keypad styles */ div.Keypad{ text-align: center; display: none; /* initially hidden, shown if needed */ margin-bottom: 0.5em; } div.Keypad button{ font-family: var(--strFontFace); font-size: 120%; background-color: #ffffff; color: #000000; width: 2em; border-style: solid; border-width: 1px; border-radius: 0.5em; color: var(--strTextColor); box-shadow: 0.2em 0.3em 0.2em var(--strTextColor); } /* JQuiz styles */ div.QuestionNavigation{ text-align: center; } .QNum{ margin: 0em 1em 0.5em 1em; font-weight: bold; vertical-align: middle; } textarea{ font-family: var(--strFontFace); } .QuestionText{ text-align: left; margin: 0px; font-size: 1em; } .Answer{ font-size: 120%; } .PartialAnswer{ font-size: 120%; letter-spacing: 0.1em; color: var(--strTitleColor); } .Highlight{ color: #000000; background-color: #ffff00; font-weight: bold; font-size: 120%; } ol.QuizQuestions{ text-align: left; list-style-type: none; } li.QuizQuestion{ padding: 1em; border-style: solid; border-width: 0px 0px 1px 0px; } ol.MCAnswers{ text-align: left; list-style-type: upper-alpha; padding: 1em; } ol.MCAnswers li{ margin-bottom: 1em; } ol.MSelAnswers{ text-align: left; list-style-type: lower-alpha; padding: 1em; } div.ShortAnswer{ padding: 1em; } .FuncButton { border-style: solid; border-radius: 0.5em; padding: 0.5em; min-width: 3em; border-left-color: var(--strFuncLightColor); border-top-color: var(--strFuncLightColor); border-right-color: var(--strFuncShadeColor); border-bottom-color: var(--strFuncShadeColor); color: var(--strTextColor); background-color: var(--strExBGColor); border-width: 1pt; cursor: pointer; box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor); } .FuncButton:active { box-shadow: none; } .FuncButton:hover{ color: var(--strExBGColor); background-color: var(--strTextColor); } /*BeginNavBarStyle*/ div.NavButtonBar{ background-color: var(--strNavBarColor); text-align: center; margin: 0.25rem 0; clear: both; font-size: 1em; padding: 0.2em; box-sizing: border-box; } .NavButton { border-style: solid; border-radius: 0.5em; padding: 0.5em; min-width: 3em; border-left-color: var(--strNavLightColor); border-top-color: var(--strNavLightColor); border-right-color: var(--strNavShadeColor); border-bottom-color: var(--strNavShadeColor); background-color: var(--strNavBarColor); color: var(--strNavTextColor); border-width: 1pt; cursor: pointer; box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor); } .NavButton:active { box-shadow: none; } .NavButton:hover{ color: var(--strNavBarColor); background-color: var(--strNavTextColor); } /*EndNavBarStyle*/ a{ color: var(--strLinkColor); } a:visited{ color: var(--strVLinkColor); } a:hover{ color: var(--strLinkColor); } div.CardStyle { position: absolute; font-family: var(--strFontFace); font-size: 1em; border-style: solid; border-radius: 0.5em; padding: 0.5em; min-width: 2em; border-width: 1pt; color: var(--strTextColor); box-shadow: 0.2em 0.3em 0.2em var(--strTextColor); background-color: var(--strExBGColor); left: -50px; top: -50px; overflow: visible; touch-action: none; user-select: none; box-sizing: border-box; } div.CardStyleCentered{ text-align: center; } .rtl{ text-align: right; font-size: 140%; }</style>
-			<script>//
-				<![CDATA[
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Shamim."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Shamim" />
+<meta name="dc:title" content="Subordinating Conjunctions 2" />
+
+
+
+<title>
+Subordinating Conjunctions 2
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       arial,helvetica,sans-serif;
+	--strFontSize:       small;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #eeeeee;
+	--strFuncShadeColor: #6e6e6e;
+	--strLinkColor:      #0000ff;
+	--strVLinkColor:     #ff00ff;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #ffffff;
+	--strExBGColor:      #dddddd;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
 
 <!--
 
@@ -525,92 +1157,114 @@ I[0]=new Array();I[0][0]=100;
 I[0][1]='';
 I[0][2]='0';
 I[0][3]=new Array();
-I[0][3][0]=new Array('It is a hot day.','',1,100,1);
-I[0][3][1]=new Array('It is a hot Day.','',0,0,1);
+I[0][3][0]=new Array('where','',1,100,1);
+I[0][3][1]=new Array('when','',0,0,1);
 I[1]=new Array();I[1][0]=100;
 I[1][1]='';
 I[1][2]='0';
 I[1][3]=new Array();
-I[1][3][0]=new Array('She is very happy. She is finally graduating from college.','',1,100,1);
-I[1][3][1]=new Array('She is very happy. She is finally graduating from College.','',0,0,1);
+I[1][3][0]=new Array('while','',0,0,1);
+I[1][3][1]=new Array('how','',1,100,1);
 I[2]=new Array();I[2][0]=100;
 I[2][1]='';
 I[2][2]='0';
 I[2][3]=new Array();
-I[2][3][0]=new Array('They are eating the cake I baked.','',1,100,1);
-I[2][3][1]=new Array('They are eating the cake i baked.','',0,0,1);
+I[2][3][0]=new Array('where','',0,0,1);
+I[2][3][1]=new Array('when','',1,100,1);
 I[3]=new Array();I[3][0]=100;
 I[3][1]='';
 I[3][2]='0';
 I[3][3]=new Array();
-I[3][3][0]=new Array('This year Christmas is on Thursday.','',1,100,1);
-I[3][3][1]=new Array('This year Christmas is on thursday.','',0,0,1);
+I[3][3][0]=new Array('while','',1,100,1);
+I[3][3][1]=new Array('where','',0,0,1);
 I[4]=new Array();I[4][0]=100;
 I[4][1]='';
 I[4][2]='0';
 I[4][3]=new Array();
-I[4][3][0]=new Array('My favorite month is April.','',1,100,1);
-I[4][3][1]=new Array('My favorite month is april.','',0,0,1);
+I[4][3][0]=new Array('where','',0,0,1);
+I[4][3][1]=new Array('while','',1,100,1);
 I[5]=new Array();I[5][0]=100;
 I[5][1]='';
 I[5][2]='0';
 I[5][3]=new Array();
-I[5][3][0]=new Array('Anna was born in Madrid, Spain.','',1,100,1);
-I[5][3][1]=new Array('Anna was born in madrid, Spain.','',0,0,1);
+I[5][3][0]=new Array('where','',1,100,1);
+I[5][3][1]=new Array('while','',0,0,1);
 I[6]=new Array();I[6][0]=100;
 I[6][1]='';
 I[6][2]='0';
 I[6][3]=new Array();
-I[6][3][0]=new Array('She speaks fluent Spanish.','',1,100,1);
-I[6][3][1]=new Array('She speaks fluent spanish.','',0,0,1);
+I[6][3][0]=new Array('how','',0,0,1);
+I[6][3][1]=new Array('when','',1,100,1);
 I[7]=new Array();I[7][0]=100;
 I[7][1]='';
 I[7][2]='0';
 I[7][3]=new Array();
-I[7][3][0]=new Array('She is married to Dr. Hahn.','',1,100,1);
-I[7][3][1]=new Array('She is Married to Dr. Hahn.','',0,0,1);
+I[7][3][0]=new Array('how','',1,100,1);
+I[7][3][1]=new Array('while','',0,0,1);
 I[8]=new Array();I[8][0]=100;
 I[8][1]='';
 I[8][2]='0';
 I[8][3]=new Array();
-I[8][3][0]=new Array('My favorite book is \'Pride and Prejudice\'.','',1,100,1);
-I[8][3][1]=new Array('My favorite book is \'Pride And Prejudice\'.','',0,0,1);
+I[8][3][0]=new Array('while','',0,0,1);
+I[8][3][1]=new Array('how','',1,100,1);
+I[8][3][2]=new Array('where','',0,0,1);
+I[8][3][3]=new Array('when','',0,0,1);
 I[9]=new Array();I[9][0]=100;
 I[9][1]='';
 I[9][2]='0';
 I[9][3]=new Array();
-I[9][3][0]=new Array('Alan asked, "How do we get there?"','',1,100,1);
-I[9][3][1]=new Array('Alan asked, "how do we get there?"','',0,0,1);
+I[9][3][0]=new Array('While','',0,0,1);
+I[9][3][1]=new Array('How','',0,0,1);
+I[9][3][2]=new Array('Where','',0,0,1);
+I[9][3][3]=new Array('When','',1,100,1);
 I[10]=new Array();I[10][0]=100;
 I[10][1]='';
 I[10][2]='0';
 I[10][3]=new Array();
-I[10][3][0]=new Array('I was born in Shanghai, China, but grew up in the United States.','',1,100,1);
-I[10][3][1]=new Array('I was born in Shanghai, China, but grew up in The United States.','',0,0,1);
+I[10][3][0]=new Array('while','',1,100,1);
+I[10][3][1]=new Array('how','',0,0,1);
+I[10][3][2]=new Array('where','',0,0,1);
+I[10][3][3]=new Array('when','',0,0,1);
 I[11]=new Array();I[11][0]=100;
 I[11][1]='';
 I[11][2]='0';
 I[11][3]=new Array();
-I[11][3][0]=new Array('Mrs. Johnson gave me the Bible.','',1,100,1);
-I[11][3][1]=new Array('Mrs. Johnson gave me The Bible.','',0,0,1);
+I[11][3][0]=new Array('while','',1,100,1);
+I[11][3][1]=new Array('how','',0,0,1);
+I[11][3][2]=new Array('where','',0,0,1);
+I[11][3][3]=new Array('when','',0,0,1);
 I[12]=new Array();I[12][0]=100;
 I[12][1]='';
 I[12][2]='0';
 I[12][3]=new Array();
-I[12][3][0]=new Array('You can see Mt. Rainier from my house.','',1,100,1);
-I[12][3][1]=new Array('You can see mt. Rainier from my house.','',0,0,1);
+I[12][3][0]=new Array('while','',0,0,1);
+I[12][3][1]=new Array('how','',1,100,1);
+I[12][3][2]=new Array('where','',0,0,1);
+I[12][3][3]=new Array('when','',0,0,1);
 I[13]=new Array();I[13][0]=100;
 I[13][1]='';
 I[13][2]='0';
 I[13][3]=new Array();
-I[13][3][0]=new Array('My family will spend the summer in Hawaii.','',1,100,1);
-I[13][3][1]=new Array('My family will spend the Summer in Hawaii.','',0,0,1);
+I[13][3][0]=new Array('while','',0,0,1);
+I[13][3][1]=new Array('how','',0,0,1);
+I[13][3][2]=new Array('where','',1,100,1);
+I[13][3][3]=new Array('when','',0,0,1);
 I[14]=new Array();I[14][0]=100;
 I[14][1]='';
 I[14][2]='0';
 I[14][3]=new Array();
-I[14][3][0]=new Array('I don\'t want to cook tonight, so I\'m going to order Thai food.','',1,100,1);
-I[14][3][1]=new Array('I don\'t want to cook tonight, So I\'m going to order Thai Food.','',0,0,1);
+I[14][3][0]=new Array('while','',0,0,1);
+I[14][3][1]=new Array('how','',0,0,1);
+I[14][3][2]=new Array('where','',0,0,1);
+I[14][3][3]=new Array('when','',1,100,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('while','',0,0,1);
+I[15][3][1]=new Array('how','',0,0,1);
+I[15][3][2]=new Array('where','',1,100,1);
+I[15][3][3]=new Array('when','',0,0,1);
 
 
 function StartUp(){
@@ -973,246 +1627,129 @@ function CheckFinished(){
 
 //-->
 
-//]]></script>
-		</head>
-		<body onload="StartUp()" id="TheBody">
-			<!-- BeginTopNavButtons -->
-			<div class="NavButtonBar" id="TopNavBar">
-				<button class="NavButton" onclick="history.back(); return false;">Back</button>
-				<button class="NavButton" onclick="location='level_1.htm'; return false;">Home</button>
-				<button class="NavButton" onclick="location='1.6_Coordinating_Conjunction_1.htm'; return false;">Next</button>
-			</div>
-			<!-- EndTopNavButtons -->
-			<div class="Titles">
-				<h2 class="ExerciseTitle">1.5 Capitalization</h2>
-			</div>
-			<div id="InstructionsDiv" class="StdDiv">
-				<div id="Instructions">Practice Sheet by Shamim Sarker</div>
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar" id="TopNavBar">
+
+
+<button class="NavButton" onclick="history.back(); return false;">Back</button>
+
+
+
+<button class="NavButton" onclick="location='level_7.htm'; return false;"> Home </button>
+
+
+
+<button class="NavButton" onclick="location='7.10_Used_To.htm'; return false;">Next</button>
+
+
 </div>
-			<div id="ContainerDiv">
-				<div class="ExerciseContainer">
-					<div id="QNav" class="QuestionNavigation">
-						<p style="text-align: right;">
-							<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">See all questions</button>
-						</p>
-						<div id="OneByOneReadout">
-							<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">Previous Question</button>
-							<span id="QNumReadout" class="QNum">&#160;</span>
-							<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">Next Question</button>
-							<br/>
-						</div>
-					</div>
-					<ol class="QuizQuestions" id="Questions">
-						<li class="QuizQuestion" id="Q_0" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_0_0">
-									<button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>
-									&#160;&#160;It is a hot day.
-								</li>
-								<li id="Q_0_1">
-									<button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>
-									&#160;&#160;It is a hot Day.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_1" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_1_0">
-									<button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>
-									&#160;&#160;She is very happy. She is finally graduating from college.
-								</li>
-								<li id="Q_1_1">
-									<button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>
-									&#160;&#160;She is very happy. she is finally graduating from College.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_2" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_2_0">
-									<button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>
-									&#160;&#160;They are eating the cake I baked.
-								</li>
-								<li id="Q_2_1">
-									<button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>
-									&#160;&#160;They are eating the cake i baked.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_3" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_3_0">
-									<button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>
-									&#160;&#160;This year Christmas is on Thursday.
-								</li>
-								<li id="Q_3_1">
-									<button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>
-									&#160;&#160;This year Christmas is on thursday.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_4" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_4_0">
-									<button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>
-									&#160;&#160;My favorite month is April.
-								</li>
-								<li id="Q_4_1">
-									<button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>
-									&#160;&#160;My favorite month is april.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_5" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_5_0">
-									<button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>
-									&#160;&#160;Anna was born in Madrid, Spain.
-								</li>
-								<li id="Q_5_1">
-									<button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>
-									&#160;&#160;Anna was born in madrid, Spain.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_6" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_6_0">
-									<button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>
-									&#160;&#160;She speaks fluent Spanish.
-								</li>
-								<li id="Q_6_1">
-									<button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>
-									&#160;&#160;She speaks fluent spanish.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_7" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_7_0">
-									<button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>
-									&#160;&#160;She is married to Dr. Hahn.
-								</li>
-								<li id="Q_7_1">
-									<button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>
-									&#160;&#160;She is Married to Dr. Hahn.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_8" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_8_0">
-									<button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>
-									&#160;&#160;My favorite book is 'Pride and Prejudice'.
-								</li>
-								<li id="Q_8_1">
-									<button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>
-									&#160;&#160;My favorite book is 'Pride And Prejudice'.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_9" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_9_0">
-									<button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>
-									&#160;&#160;Alan asked, "How do we get there?"
-								</li>
-								<li id="Q_9_1">
-									<button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>
-									&#160;&#160;Alan asked, "how do we get there?"
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_10" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_10_0">
-									<button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>
-									&#160;&#160;I was born in Shanghai, China, but grew up in the United States.
-								</li>
-								<li id="Q_10_1">
-									<button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>
-									&#160;&#160;I was born in Shanghai, China, but grew up in The United States.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_11" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_11_0">
-									<button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>
-									&#160;&#160;Mrs. Johnson gave me the Bible.
-								</li>
-								<li id="Q_11_1">
-									<button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>
-									&#160;&#160;Mrs. Johnson gave me The Bible.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_12" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_12_0">
-									<button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>
-									&#160;&#160;You can see Mt. Rainier from my house.
-								</li>
-								<li id="Q_12_1">
-									<button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>
-									&#160;&#160;You can see mt. Rainier from my house.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_13" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_13_0">
-									<button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>
-									&#160;&#160;My family will spend the summer in Hawaii.
-								</li>
-								<li id="Q_13_1">
-									<button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>
-									&#160;&#160;My family will spend the Summer in Hawaii.
-								</li>
-							</ol>
-						</li>
-						<li class="QuizQuestion" id="Q_14" style="display: none;">
-							<div class="QuestionText">Which is correct?</div>
-							<ol class="MCAnswers">
-								<li id="Q_14_0">
-									<button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>
-									&#160;&#160;I don't want to cook tonight, so I'm going to order Thai food.
-								</li>
-								<li id="Q_14_1">
-									<button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>
-									&#160;&#160;I don't want to cook tonight, So I'm going to order Thai Food.
-								</li>
-							</ol>
-						</li>
-					</ol>
-				</div>
-			</div>
-			<div class="Feedback" id="FeedbackDiv">
-				<div class="FeedbackText" id="FeedbackContent"/>
-				<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
-			</div>
-			<!-- BeginBottomNavButtons -->
-			<div class="NavButtonBar" id="BottomNavBar">
-				<button class="NavButton" onclick="history.back(); return false;">Back</button>
-				<button class="NavButton" onclick="location='level_1.htm'; return false;">Home</button>
-				<button class="NavButton" onclick="location='1.6_Coordinating_Conjunction_1.htm'; return false;">Next</button>
-			</div>
-			<!-- EndBottomNavButtons -->
-			<!-- BeginSubmissionForm -->
-			<!-- EndSubmissionForm -->
-		</body>
-	</html>
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Subordinating Conjunctions 2</h2>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Practice Sheet by Shamim Sarker</div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">See all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">Previous Question</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">Next Question</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">I don't know _____ I put my keys.</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;where</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">We want to know _____ you got inside?</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;while</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;how</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">I don't know _____ she is coming home.</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;where</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Someone called _____ you were taking a shower.</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;while</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;where</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">My dog started barking _____ I was talking on the phone.</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;where</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;while</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">I need to know _____ John hid the present.</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;where</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;while</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">I started looking for a gas station _____ my gas light went on.</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;how</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">I wonder _____ you did it.</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;how</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;while</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">I wish that I knew _____ to swim, but I don't.</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;while</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;how</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;where</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">_____ she arrived home, she saw that her husband had prepared dinner.</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;While</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;How</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;Where</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;When</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">He is finishing the report _____ she is working on the presentation.</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;while</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;how</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;where</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Let's play outside _____ there is still some sunlight.</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;while</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;how</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;where</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Can you tell me _____ to get to the bank from here?</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;while</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;how</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;where</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">I can't remember _____ I put my phone. Have you seen it?</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;while</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;how</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;where</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">You can sleep on my couch _____ you visit.</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;while</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;how</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;where</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;when</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">We are best friends, but I don't know _____ he lives.</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;while</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;how</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;where</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;when</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+<div class="NavButtonBar" id="BottomNavBar">
+
+
+<button class="NavButton" onclick="history.back(); return false;">Back</button>
+
+
+
+<button class="NavButton" onclick="location='level_7.htm'; return false;"> Home </button>
+
+
+
+<button class="NavButton" onclick="location='7.10_Used_To.htm'; return false;">Next</button>
+
+
+</div>
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
